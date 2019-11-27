@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Company>reblGreen Software Ltd</Company>
+    <RootNamespace>reblGreen.AI.JohnE5</RootNamespace>
+    <AssemblyName>reblGreen.AI.JohnE5</AssemblyName>
+    <Description>JohnE5 (based on everyone's favorite Short Circuit character) is a weighted multi-category classifier concept which is ideal for training text taxonomization models. The project is open source and is designed to be an entry point into understanding the mechanics of machine learning. without mindblowing matrices. Using similar methods to Neive Bayes classification, JohnE5 takes a more linear approach to training, rather than the binary standard used in Neive Bayes. Read more about it in the GitHub repo.</Description>
+    <Authors>John Earnshaw</Authors>
+    <PackageIconUrl>https://avatars1.githubusercontent.com/u/31241141</PackageIconUrl>
+    <RepositoryUrl>https://github.com/johnearnshaw/JohnE5</RepositoryUrl>
+    <RepositoryType>GIT</RepositoryType>
+    <PackageTags>taxonomy classifier document categorize</PackageTags>
+    <Copyright>reblGreen Software Ltd</Copyright>
+    <PackageProjectUrl>https://reblgreen.com/</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/johnearnshaw/JohnE5/master/LICENSE</PackageLicenseUrl>
+  </PropertyGroup>
+
+</Project>

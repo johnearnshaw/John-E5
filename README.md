@@ -13,6 +13,15 @@ reblGreen.AI.JohnE5 is an [MIT license](https://tldrlegal.com/license/mit-licens
 
 Its name is derrived from the original project developer John Earnshaw, and is based on the Johnny 5 character from the Short Circuit movie series. The reasoning behind this is that text classification works similarly to the movie clip where Johhny 5 reads books to learn, "input, more input!".
 
+### Weighted Classification ###
+
+Neive Bayes classification algorithm uses a binary approach usually to train only 2 cattegories. This may work well for classifying in a boolean mannor such as true or false, good or bad, male or female, happy or sad, etc...
+
+The concept behind the weighted classification algorithm used in JohnE5 works with floating point values rather a 1/0 binary approach. It could be similar to the way in which quantum computing works, in the sense that there are more than 2 states.
+
+The more a token is found in a category, the stronger the token becomes when calculating classification. Common words are calculated with a diluted ranking for appearing across many categories which automatically creates a "stop word" system where common tokens have less weight.
+
+A good example of the way that this works is to suggest "Soccer" and "Football", much of the content used to train these categories will most deffinately contain the words "football", "goal", "stadium", etc... Due to this, these tokens will be diluted to 50% of their weight across both categories and would require the existence of a unique or series of unique words to more accurately classify between these two categories. For example, unique words to "Soccer" category may be things like "saved", "goalkeeper", "penalty", etc.. and subsequently words like "helmet" for "Football" category.
 
 ___
 
@@ -27,7 +36,11 @@ Take a look at the [reblGreen.AI.JohnE5.TestGUI](https://github.com/reblGreen/re
 5. Press the "Train" button.
 6. Repeat for more classification categories changing the input text each time.
 
-If you press the "Classify" button a second time on the same input text, you should see the trained category appear in the categories list. This will display the accuracy probability 
+If you press the "Classify" button a second time on the same input text, you should see the trained category appear in the categories list. This will display the accuracy probability converted into a percentatge to the top right of the category box.
+
+As you train the model with more categories, the text at the top of the example training application may change to tell you which categories have a less token association count and will suggest that you add text to the category containing the least classified tokens.
+
+Since this is a multi-category training model, it is designed for categories to be added in series and in a linear fashion. This means that training a single category to the maximum level before moving on to train a new category will impact the probability of accuracy for the categories trained prior. It is much more accurate to train a category with a single piece of text and then move on to the next category, itterating back to train the first category once all required categories are added.
 
 The core project and examples will be well documented and if you get stuck or have any questions, please contact us and we'll be glad to help out.
 
